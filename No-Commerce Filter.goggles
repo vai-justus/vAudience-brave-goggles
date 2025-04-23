@@ -18,7 +18,24 @@ $downrank=4,site=aliexpress.com
 $downrank=4,site=etsy.com
 $downrank=4,site=shopify.com
 
-! Regional Marketplaces
+! German Marketplaces
+$downrank=4,site=otto.de
+$downrank=4,site=zalando.de
+$downrank=4,site=mediamarkt.de
+$downrank=4,site=saturn.de
+$downrank=4,site=real.de
+$downrank=4,site=kaufland.de
+$downrank=4,site=lidl.de
+$downrank=4,site=aldi-sued.de
+$downrank=4,site=aldi-nord.de
+$downrank=3,site=ebay.de
+$downrank=3,site=ebay-kleinanzeigen.de
+$downrank=3,site=hood.de
+$downrank=3,site=rakuten.de
+$downrank=3,site=check24.de
+$downrank=3,site=geizhals.de
+
+! International Marketplaces
 $downrank=3,site=target.com
 $downrank=3,site=bestbuy.com
 $downrank=3,site=bestbuy.ca
@@ -26,16 +43,21 @@ $downrank=3,site=wayfair.com
 $downrank=3,site=lazada.com
 $downrank=3,site=shopee.com
 $downrank=3,site=flipkart.com
-$downrank=3,site=otto.de
-$downrank=3,site=zalando.com
 $downrank=3,site=asos.com
 
 ! Electronics & Specialty Retail
 $downrank=3,site=newegg.com
 $downrank=3,site=bhphotovideo.com
 $downrank=3,site=microcenter.com
-$downrank=3,site=mediamarkt.de
 $downrank=3,site=currys.co.uk
+$downrank=3,site=conrad.de
+$downrank=3,site=notebooksbilliger.de
+$downrank=3,site=alternate.de
+$downrank=3,site=cyberport.de
+$downrank=3,site=computeruniverse.net
+$downrank=3,site=mindfactory.de
+$downrank=3,site=reichelt.de
+$downrank=3,site=digitalo.de
 
 ! Fashion and Department Stores
 $downrank=3,site=zara.com
@@ -44,6 +66,13 @@ $downrank=3,site=uniqlo.com
 $downrank=3,site=macys.com
 $downrank=3,site=nordstrom.com
 $downrank=3,site=farfetch.com
+$downrank=3,site=bonprix.de
+$downrank=3,site=aboutyou.de
+$downrank=3,site=galeria.de
+$downrank=3,site=douglas.de
+$downrank=3,site=tchibo.de
+$downrank=3,site=deichmann.com
+$downrank=3,site=c-and-a.com
 
 ! Price Comparison Sites
 $downrank=3,site=shopping.google.com
@@ -52,29 +81,13 @@ $downrank=3,site=pricerunner.com
 $downrank=3,site=idealo.de
 $downrank=3,site=kelkoo.com
 
-! Common Shopping Patterns
-$downrank=2,pattern=*/product/*
-$downrank=2,pattern=*/products/*
-$downrank=2,pattern=*/shop/*
-$downrank=2,pattern=*/store/*
-$downrank=2,pattern=*/cart/*
-$downrank=2,pattern=*/checkout/*
+! Generic Shopping Domains
+$downrank=2,site=shop.com
+$downrank=2,site=shopping.com
+$downrank=2,site=stores.com
+$downrank=2,site=marketplace.com
 
-! Shopping Parameters
-$downrank=2,pattern=*pid=*
-$downrank=2,pattern=*product_id=*
-$downrank=2,pattern=*category=*
-$downrank=2,pattern=*catalog=*
-
-! Shopping Subdomains
-$downrank=2,pattern=shop.*
-$downrank=2,pattern=store.*
-$downrank=2,pattern=*.shop.*
-$downrank=2,pattern=*.store.*
-$downrank=2,pattern=*.market.*
-$downrank=2,pattern=shopping.*
-
-! Boost Informational Content
+! International Educational Content
 $boost=2,site=wikipedia.org
 $boost=2,site=edu
 $boost=2,site=gov
@@ -83,3 +96,27 @@ $boost=1,site=org
 $boost=1,site=medium.com
 $boost=1,site=scholar.google.com
 $boost=1,site=researchgate.net
+
+! German Educational & Research
+$boost=2,site=uni-*.de
+$boost=2,site=tu-*.de
+$boost=2,site=fh-*.de
+$boost=2,site=hs-*.de
+$boost=2,site=bpb.de
+$boost=2,site=bundesregierung.de
+$boost=2,site=bundestag.de
+$boost=2,site=deutsche-digitale-bibliothek.de
+$boost=2,site=wissenschaft.de
+$boost=2,site=forschung.de
+$boost=2,site=dfg.de
+$boost=2,site=mpg.de
+$boost=2,site=fraunhofer.de
+$boost=2,site=helmholtz.de
+
+! German News
+$boost=1,site=tagesschau.de
+$boost=1,site=zeit.de
+$boost=1,site=sueddeutsche.de
+$boost=1,site=faz.net
+$boost=1,site=spiegel.de
+$boost=1,site=deutschlandfunk.de
