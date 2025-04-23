@@ -1,0 +1,89 @@
+! name: No-Commerce Filter
+! description: Removes or downranks e-commerce platforms and shopping sites to focus on informational content
+! public: true
+! author: SearchArchitect
+! avatar: #FF4747
+
+! Major Global E-commerce Platforms
+$downrank=4,site=amazon.*
+$downrank=4,site=ebay.*
+$downrank=4,site=walmart.*
+$downrank=4,site=aliexpress.com
+$downrank=4,site=etsy.com
+$downrank=4,site=shopify.com
+$downrank=4,site=rakuten.*
+$downrank=4,site=jd.com
+$downrank=4,site=taobao.com
+$downrank=4,site=tmall.com
+
+! Regional Marketplaces
+$downrank=3,site=target.com
+$downrank=3,site=bestbuy.*
+$downrank=3,site=wayfair.com
+$downrank=3,site=lazada.*
+$downrank=3,site=shopee.*
+$downrank=3,site=flipkart.com
+$downrank=3,site=otto.de
+$downrank=3,site=zalando.*
+$downrank=3,site=asos.com
+$downrank=3,site=allegro.pl
+
+! Electronics & Specialty Retail
+$downrank=3,site=newegg.*
+$downrank=3,site=bhphotovideo.com
+$downrank=3,site=microcenter.com
+$downrank=3,site=mediamarkt.*
+$downrank=3,site=currys.co.uk
+
+! Fashion and Department Stores
+$downrank=3,site=zara.com
+$downrank=3,site=hm.com
+$downrank=3,site=uniqlo.com
+$downrank=3,site=macys.com
+$downrank=3,site=nordstrom.com
+$downrank=3,site=farfetch.com
+
+! Price Comparison Sites
+$downrank=3,site=shopping.google.*
+$downrank=3,site=pricegrabber.com
+$downrank=3,site=pricerunner.*
+$downrank=3,site=idealo.*
+$downrank=3,site=kelkoo.*
+
+! Common Shopping Patterns (Multi-language)
+/product/$downrank=2
+/products/$downrank=2
+/shop/$downrank=2
+/store/$downrank=2
+/tienda/$downrank=2
+/boutique/$downrank=2
+/kaufen/$downrank=2
+/магазин/$downrank=2
+/商店/$downrank=2
+
+! Shopping Parameters & Paths
+$downrank=2,pattern=*?pid=*
+$downrank=2,pattern=*?product_id=*
+$downrank=2,pattern=*/products/*
+$downrank=2,pattern=*/category/*
+$downrank=2,pattern=*/catalog/*
+$downrank=2,pattern=*/cart/*
+$downrank=2,pattern=*/checkout/*
+
+! Shopping Subdomains
+$downrank=2,pattern=shop.*
+$downrank=2,pattern=store.*
+$downrank=2,pattern=*.shop.*
+$downrank=2,pattern=*.store.*
+$downrank=2,pattern=*.market.*
+$downrank=2,pattern=shopping.*
+
+! Boost Informational Content
+$boost=2,site=wikipedia.org
+$boost=2,site=*.edu
+$boost=2,site=*.gov
+$boost=2,site=*.ac.uk
+$boost=1,site=*.org
+$boost=1,site=medium.com
+$boost=1,site=scholar.google.*
+$boost=1,site=researchgate.net
