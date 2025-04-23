@@ -4,72 +4,40 @@
 ! author: Justus Gleißner
 ! avatar: #FF4500
 
-$downrank=2,site=answers.com
-$downrank=2,site=expertexchange.com
-$downrank=2,site=informer.com
-$downrank=2,site=microsoft.com
-$downrank=2,site=answerio.com
-$downrank=2,site=ask.fm
-$downrank=2,site=gutefrage.net
-$downrank=2,site=quora.com
-$downrank=2,site=yahoo.com
+! Primary trusted platforms
+$boost=4,site=reddit.com
+$boost=3,site=*.stackexchange.com
+$boost=3,site=stackoverflow.com
+$boost=3,site=askubuntu.com
+$boost=3,site=superuser.com
+$boost=2,site=quora.com
 
-$boost=2,site=reddit.com
-$boost=2,site=stackexchange.com
-$boost=2,site=stackoverflow.com
-$boost=2,site=superuser.com
-$boost=2,site=mathoverflow.net
-$boost=2,site=dev.to
-$boost=2,site=github.com
-$boost=2,site=gitlab.com
-$boost=2,site=mozilla.org
-$boost=2,site=bleepingcomputer.com
-$boost=2,site=spiceworks.com
-$boost=2,site=anandtech.com
-$boost=2,site=macrumors.com
-$boost=2,site=tomshardware.com
-$boost=2,site=academia.edu
-$boost=2,site=researchgate.net
-
-/r/askhistorians/$boost=3
-/r/askmath/$boost=3
-/r/askscience/$boost=3
-/r/AskStatistics/$boost=3
-/r/askengineers/$boost=3
-/r/AskProgramming/$boost=3
-/r/asklinguistics/$boost=3
-/r/askphilosophy/$boost=3
-/r/neutralpolitics/$boost=3
-/r/AskCulinary/$boost=3
-/r/AskDocs/$boost=3
+! Boost specific Reddit patterns
+/r/*/comments/$boost=2
+/r/askreddit/$boost=3
 /r/explainlikeimfive/$boost=3
+/r/answers/$boost=3
+/r/nostupidquestions/$boost=3
 
-/^accepted/$boost=2
-/^best-answer/$boost=2
-/^documentation/$boost=2
-/^guide/$boost=2
-/^howto/$boost=2
-/^knowledge-base/$boost=2
-/^questions/$boost=2
-/^tutorial/$boost=2
-/^wiki/$boost=2
-/^answers/$boost=1
-/^comments/$boost=1
-/^discussion/$boost=1
-/^discussions/$boost=1
-/^featured/$boost=1
-/^forum/$boost=1
-/^issues/$boost=1
-/^solved/$boost=1
-/^solution/$boost=1
-/^thread/$boost=1
+! Q&A indicators in URLs
+/questions/$boost=2
+/answers/$boost=2
+/discussion/$boost=1
+/solved/$boost=2
+/solution/$boost=2
+/answer/$boost=2
 
-/^affiliate/$downrank=2
-/^buy-sell/$downrank=2
-/^classified/$downrank=2
-/^marketplace/$downrank=2
-/^products/$downrank=2
-/^shopping/$downrank=2
-/spam/$discard
-/^sponsored/$downrank=2
-/^store/$downrank=2
+! Exclude low quality sources
+$discard,site=gutefrage.net
+$downrank=3,site=yahoo.answers.com
+$downrank=2,site=answers.com
+
+! Downrank commercial/spam indicators
+/sponsored/$downrank=3
+/promoted/$downrank=3
+/advertisement/$downrank=3
+
+! Additional quality indicators
+$boost=1,site=forums.debian.org
+$boost=1,site=forums.ubuntu.com
+$boost=1,site=community.*.com
