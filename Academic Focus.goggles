@@ -1,0 +1,81 @@
+! name: Academic Focus
+! description: Elevates results from .edu domains and academic journals while downranking commercial and non-academic sources
+! public: true
+! author: SearchArchitect
+! avatar: #4169E1
+
+! Primary Academic Sources
+$boost=4,site=scholar.google.com
+$boost=4,site=arxiv.org
+$boost=4,site=jstor.org
+$boost=4,site=sciencedirect.com
+$boost=4,site=nature.com
+$boost=4,site=science.org
+$boost=4,site=springer.com
+$boost=4,site=ieee.org
+$boost=4,site=acm.org
+
+! Academic Domains
+$boost=3,site=*.edu
+$boost=3,site=*.ac.uk
+$boost=3,site=*.ac.jp
+$boost=3,site=*.edu.au
+$boost=3,site=*.edu.cn
+$boost=3,site=*.uni-*.de
+$boost=3,site=*.tu-*.de
+
+! Research Networks
+$boost=3,site=researchgate.net
+$boost=3,site=academia.edu
+$boost=3,site=semanticscholar.org
+$boost=3,site=worldcat.org
+$boost=3,site=core.ac.uk
+$boost=3,site=eric.ed.gov
+
+! Academic Publishers
+$boost=2,site=tandfonline.com
+$boost=2,site=wiley.com
+$boost=2,site=sagepub.com
+$boost=2,site=oxford.academic.com
+$boost=2,site=cambridge.org
+$boost=2,site=mitpress.mit.edu
+$boost=2,site=aps.org
+
+! Research Organizations
+$boost=2,site=mpg.de
+$boost=2,site=fraunhofer.de
+$boost=2,site=helmholtz.de
+$boost=2,site=royal-society.org
+$boost=2,site=dfg.de
+$boost=2,site=cnrs.fr
+
+! URL Patterns for Academic Content
+/doi/$boost=3
+/abstract/$boost=2
+/publication/$boost=2
+/journal/$boost=2
+/research/$boost=2
+/proceedings/$boost=2
+/thesis/$boost=2
+/dissertation/$boost=2
+
+! Commercial Content Downranking
+$downrank=3,site=amazon.com
+$downrank=3,site=ebay.com
+$downrank=3,site=walmart.com
+$downrank=3,site=aliexpress.com
+$downrank=3,site=shopify.com
+
+! Shopping-Related Patterns
+/shop/$downrank=2
+/product/$downrank=2
+/store/$downrank=2
+/price/$downrank=2
+/deal/$downrank=2
+/cart/$downrank=2
+
+! Social Media Downranking
+$downrank=2,site=facebook.com
+$downrank=2,site=instagram.com
+$downrank=2,site=tiktok.com
+$downrank=2,site=pinterest.com
