@@ -6,7 +6,6 @@
 
 ! Primary trusted platforms
 $boost=4,site=reddit.com
-$boost=3,site=stackexchange.com
 $boost=3,site=stackoverflow.com
 $boost=3,site=askubuntu.com
 $boost=3,site=superuser.com
@@ -40,5 +39,4 @@ $downrank=2,site=answers.com
 ! Additional quality indicators
 $boost=1,site=forums.debian.org
 $boost=1,site=forums.ubuntu.com
-$boost=1,site=community.mozilla.org
 $boost=1,site=community.brave.com
