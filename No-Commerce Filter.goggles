@@ -98,10 +98,16 @@ $boost=1,site=scholar.google.com
 $boost=1,site=researchgate.net
 
 ! German Educational & Research
-$boost=2,site=uni-*.de
-$boost=2,site=tu-*.de
-$boost=2,site=fh-*.de
-$boost=2,site=hs-*.de
+$boost=2,site=uni-berlin.de
+$boost=2,site=uni-muenchen.de
+$boost=2,site=uni-frankfurt.de
+$boost=2,site=uni-hamburg.de
+$boost=2,site=tu-berlin.de
+$boost=2,site=tu-muenchen.de
+$boost=2,site=tu-dresden.de
+$boost=2,site=fh-aachen.de
+$boost=2,site=fh-dortmund.de
+$boost=2,site=hs-bremen.de
 $boost=2,site=bpb.de
 $boost=2,site=bundesregierung.de
 $boost=2,site=bundestag.de
