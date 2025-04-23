@@ -4,39 +4,95 @@
 ! author: Justus Gleißner
 ! avatar: #FF4500
 
-! Primary trusted platforms
+! Primary Platforms with High-Quality Content
 $boost=4,site=reddit.com
 $boost=3,site=stackoverflow.com
 $boost=3,site=askubuntu.com
 $boost=3,site=superuser.com
 $boost=2,site=quora.com
 
-! Boost specific Reddit patterns
-/r/*/comments/$boost=2
-/r/askreddit/$boost=3
+! Specific High-Quality Subreddits
+/r/askscience/$boost=4
+/r/askhistorians/$boost=4
 /r/explainlikeimfive/$boost=3
-/r/answers/$boost=3
+/r/askreddit/$boost=3
 /r/nostupidquestions/$boost=3
+/r/answers/$boost=3
+/r/techsupport/$boost=3
+/r/programming/$boost=3
+/r/learnprogramming/$boost=3
+/r/cscareerquestions/$boost=3
+/r/askengineers/$boost=3
+/r/askdocs/$boost=3
+/r/legaladvice/$boost=3
+/r/personalfinance/$boost=3
+/r/buildapc/$boost=3
+/r/homeimprovement/$boost=3
 
-! Q&A indicators in URLs
+! Reddit Quality Indicators
+/r/*/comments/$boost=2
+/r/*/wiki/$boost=3
+/r/*/top/$boost=2
+/comments/[^/]+/[^/]+/[^/]+/$boost=2
+
+! Technical Documentation and Wikis
+$boost=2,site=wiki.archlinux.org
+$boost=2,site=debian.org
+$boost=2,site=ubuntu.com
+$boost=2,site=github.com
+$boost=2,site=gitlab.com
+$boost=2,site=serverfault.com
+$boost=2,site=mathoverflow.net
+
+! Professional/Educational Sites
+$boost=2,site=medium.com
+$boost=2,site=dev.to
+$boost=2,site=freecodecamp.org
+$boost=2,site=geeksforgeeks.org
+
+! Q&A URL Patterns
 /questions/$boost=2
 /answers/$boost=2
-/discussion/$boost=1
-/solved/$boost=2
 /solution/$boost=2
+/solved/$boost=2
 /answer/$boost=2
+/howto/$boost=2
+/guide/$boost=2
+/tutorial/$boost=2
+/explained/$boost=2
+/discussion/$boost=1
+/wiki/$boost=2
+/docs/$boost=2
+/documentation/$boost=2
+/help/$boost=1
 
-! Exclude low quality sources
+! Quality Indicators in URLs
+/best[-]answer/$boost=3
+/accepted[-]answer/$boost=3
+/verified[-]solution/$boost=3
+/official[-]guide/$boost=3
+/comprehensive/$boost=2
+/complete[-]guide/$boost=2
+
+! Exclude Low Quality Sources
 $discard,site=gutefrage.net
-$downrank=3,site=yahoo.answers.com
-$downrank=2,site=answers.com
+$downrank=3,site=answers.com
+$downrank=3,site=experts-exchange.com
+$downrank=2,site=chegg.com
+$downrank=2,site=coursehero.com
 
-! Downrank commercial/spam indicators
+! Downrank Commercial/Spam Content
 /sponsored/$downrank=3
 /promoted/$downrank=3
 /advertisement/$downrank=3
+/affiliate/$downrank=3
+/marketing/$downrank=2
+/buy[-]now/$downrank=3
+/shopping/$downrank=2
 
-! Additional quality indicators
-$boost=1,site=forums.debian.org
-$boost=1,site=forums.ubuntu.com
-$boost=1,site=community.brave.com
+! Downrank Low-Quality Indicators
+/click[-]bait/$downrank=3
+/you[-]wont[-]believe/$downrank=3
+/miracle[-]solution/$downrank=3
+/one[-]weird[-]trick/$downrank=3
+/shocking[-]result/$downrank=3
