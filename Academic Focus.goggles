@@ -16,13 +16,15 @@ $boost=4,site=ieee.org
 $boost=4,site=acm.org
 
 ! Academic Domains
-$boost=3,site=*.edu
-$boost=3,site=*.ac.uk
-$boost=3,site=*.ac.jp
-$boost=3,site=*.edu.au
-$boost=3,site=*.edu.cn
-$boost=3,site=*.uni-*.de
-$boost=3,site=*.tu-*.de
+$boost=3,site=edu
+$boost=3,site=ac.uk
+$boost=3,site=ac.jp
+$boost=3,site=edu.au
+$boost=3,site=edu.cn
+$boost=3,site=uni-berlin.de
+$boost=3,site=uni-muenchen.de
+$boost=3,site=tu-berlin.de
+$boost=3,site=tu-muenchen.de
 
 ! Research Networks
 $boost=3,site=researchgate.net
